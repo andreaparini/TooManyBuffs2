@@ -6,7 +6,7 @@
         android:targetSdkVersion="22" />
     <application
         android:allowBackup="true"
-        android:icon="@drawable/Logo"
+        android:icon="@drawable/LogoProva.png"
         android:label="@string/app_name"
         android:theme="@style/MyTheme"
 		android:resizeableActivity = "true">
