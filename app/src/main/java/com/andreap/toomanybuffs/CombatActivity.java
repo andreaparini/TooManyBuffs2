@@ -274,7 +274,7 @@ public class CombatActivity extends AppCompatActivity
                 {
                     numericToHit += 1;    
                 } else {
-                    numericToHit += Integer.valueOf(savedAttacks.get(j-1).weaponEnhancement);
+                    numericToHit += Integer.parseInt(savedAttacks.get(j-1).weaponEnhancement);
                 }
                 
                 
@@ -543,7 +543,7 @@ public class CombatActivity extends AppCompatActivity
                 if(!(savedAttacks.get(j-1).weaponEnhancement)
                    .equals("Masterwork"))
                 {
-                    numericBonusDamage += Integer.valueOf(savedAttacks.get(j-1).weaponEnhancement);
+                    numericBonusDamage += Integer.parseInt(savedAttacks.get(j-1).weaponEnhancement);
                 }
                 
                 numericBonusDamage+= staticBuild.getTotalDmgBonus();

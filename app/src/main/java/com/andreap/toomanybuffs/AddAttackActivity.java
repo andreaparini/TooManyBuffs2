@@ -146,7 +146,7 @@ public class AddAttackActivity extends AppCompatActivity
             name = name.trim();
             
             String baseDamage = new String(String.valueOf(baseDamageSpinner.getSelectedItem()));
-            String weaponEnhancement = new String(String.valueOf(baseDamageSpinner.getSelectedItem()));
+            String weaponEnhancement = new String(String.valueOf(weaponEnhancementSpinner.getSelectedItem()));
             String critical = new String(String.valueOf(criticalSpinner.getSelectedItem()));
             String bonusDiceDamage = new String(String.valueOf(bonusDiceDamageSpinner.getSelectedItem()));
             String bonusDiceDamage2 = new String(String.valueOf(bonusDiceDamageSpinner2.getSelectedItem()));
