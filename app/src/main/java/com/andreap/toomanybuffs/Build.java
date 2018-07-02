@@ -63,8 +63,7 @@ public class Build implements Serializable
     //to-hit bonuses
     public int toHitMorale;
     public int toHitLuck;
-    public int toHitSacred;
-    public int toHitEnhancement;
+    public int toHitSacred;   
     public int toHitSize;
     public int toHitUntyped;
     public int toHitOther;
@@ -73,7 +72,6 @@ public class Build implements Serializable
     public int dmgMorale;
     public int dmgLuck;
     public int dmgSacred;
-    public int dmgEnhancement;
     public int dmgUntyped;
     public int dmgOther;
     
@@ -129,7 +127,6 @@ public class Build implements Serializable
         this.toHitMorale = 0;
         this.toHitLuck = 0;
         this.toHitSacred = 0;
-        this.toHitEnhancement = 0;
         this.toHitSize = 0;
         this.toHitUntyped = 0;
         this.toHitOther = 0;
@@ -138,7 +135,6 @@ public class Build implements Serializable
         this.dmgMorale = 0;
         this.dmgLuck = 0;
         this.dmgSacred = 0;
-        this.dmgEnhancement = 0;
         this.dmgUntyped = 0;
         this.dmgOther = 0;
 
@@ -178,8 +174,8 @@ public class Build implements Serializable
      int dexSize, int dexAlchemical, int dexInherent, int dexOther, int con,
      int conEnhancement, int conMorale, int conSize, int conAlchemical,
      int conInherent, int conOther, int toHitMorale, int toHitLuck,
-     int toHitSacred, int toHitEnhancement, int toHitSize, int toHitUntyped, int toHitOther,
-     int dmgMorale, int dmgLuck,  int dmgSacred, int dmgEnhancement,
+     int toHitSacred, int toHitSize, int toHitUntyped, int toHitOther,
+     int dmgMorale, int dmgLuck,  int dmgSacred,
      int dmgUntyped, int dmgOther, int acArmor, int acNatural,
      int acNaturalEnhancement, int acSacred, int acShield, int acDeflection,
      int acUntyped, int acOther, int acDexMax, int acSize)
@@ -219,7 +215,6 @@ public class Build implements Serializable
         returnBuild.toHitMorale = toHitMorale;
         returnBuild.toHitLuck = toHitLuck;
         returnBuild.toHitSacred = toHitSacred;
-        returnBuild.toHitEnhancement = toHitEnhancement;
         returnBuild.toHitSize = toHitSize;
         returnBuild.toHitUntyped = toHitUntyped;
         returnBuild.toHitOther = toHitOther;
@@ -227,7 +222,6 @@ public class Build implements Serializable
         returnBuild.dmgMorale = dmgMorale;
         returnBuild.dmgLuck = dmgLuck;
         returnBuild.dmgSacred = dmgSacred;
-        returnBuild.dmgEnhancement = dmgEnhancement;
         returnBuild.dmgUntyped = dmgUntyped;
         returnBuild.dmgOther = dmgOther;
         
@@ -332,7 +326,6 @@ public class Build implements Serializable
                this.toHitMorale +
                this.toHitLuck +
                this.toHitSacred +
-               this.toHitEnhancement+
                this.toHitSize +
                this.toHitUntyped+
                this.toHitOther;
@@ -344,7 +337,6 @@ public class Build implements Serializable
                 this.dmgMorale+
                 this.dmgLuck +
                 this.dmgSacred+
-                this.dmgEnhancement+
                 this.dmgUntyped+
                 this.dmgOther;
     }
@@ -435,14 +427,12 @@ public class Build implements Serializable
         int toHitMorale = 0;
         int toHitLuck = 0;
         int toHitSacred = 0;
-        int toHitEnhancement = 0;
         int toHitSize = 0;
         int toHitUntyped = 0;
         int toHitOther = 0;
         int dmgMorale = 0;
         int dmgLuck = 0;
         int dmgSacred = 0;
-        int dmgEnhancement = 0;
         int dmgUntyped = 0;
         int dmgOther = 0;
         int acArmor = 0;
@@ -519,8 +509,7 @@ public class Build implements Serializable
                         //to-hit bonuses
                           toHitMorale = Integer.parseInt(eElement.getElementsByTagName("tohitmorale").item(0).getTextContent());
                           toHitLuck = Integer.parseInt(eElement.getElementsByTagName("tohitluck").item(0).getTextContent());
-                          toHitSacred = Integer.parseInt(eElement.getElementsByTagName("tohitsacred").item(0).getTextContent());
-                          toHitEnhancement  = Integer.parseInt(eElement.getElementsByTagName("tohitenhancement").item(0).getTextContent());
+                          toHitSacred = Integer.parseInt(eElement.getElementsByTagName("tohitsacred").item(0).getTextContent());           
                           toHitSize = Integer.parseInt(eElement.getElementsByTagName("tohitsize").item(0).getTextContent());
                           toHitUntyped = Integer.parseInt(eElement.getElementsByTagName("tohituntyped").item(0).getTextContent());
                           toHitOther = Integer.parseInt(eElement.getElementsByTagName("tohitother").item(0).getTextContent());
@@ -528,8 +517,7 @@ public class Build implements Serializable
                         //damage bonuses
                           dmgMorale = Integer.parseInt(eElement.getElementsByTagName("dmgmorale").item(0).getTextContent());
                           dmgLuck = Integer.parseInt(eElement.getElementsByTagName("dmgluck").item(0).getTextContent());
-                          dmgSacred = Integer.parseInt(eElement.getElementsByTagName("dmgsacred").item(0).getTextContent());
-                          dmgEnhancement  = Integer.parseInt(eElement.getElementsByTagName("dmgenhancement").item(0).getTextContent());
+                          dmgSacred = Integer.parseInt(eElement.getElementsByTagName("dmgsacred").item(0).getTextContent());                        
                           dmgUntyped = Integer.parseInt(eElement.getElementsByTagName("dmguntyped").item(0).getTextContent());
                           dmgOther = Integer.parseInt(eElement.getElementsByTagName("dmgother").item(0).getTextContent());
                         
@@ -565,8 +553,8 @@ public class Build implements Serializable
                                                      dexSize, dexAlchemical, dexInherent, dexOther, con,
                                                      conEnhancement, conMorale, conSize, conAlchemical,
                                                      conInherent, conOther, toHitMorale, toHitLuck,
-                                                     toHitSacred, toHitEnhancement, toHitSize, toHitUntyped, toHitOther,
-                                                     dmgMorale, dmgLuck, dmgSacred, dmgEnhancement,
+                                                     toHitSacred, toHitSize, toHitUntyped, toHitOther,
+                                                     dmgMorale, dmgLuck, dmgSacred,
                                                      dmgUntyped, dmgOther, acArmor, acNatural,
                                                      acNaturalEnhancement, acSacred, acShield, acDeflection,
                                                      acUntyped, acOther, acDexMax, acSize);
@@ -591,8 +579,8 @@ public class Build implements Serializable
                                   int dexSize, int dexAlchemical, int dexInherent, int dexOther, int con,
                                   int conEnhancement, int conMorale, int conSize, int conAlchemical,
                                   int conInherent, int conOther, int toHitMorale, int toHitLuck,
-                                  int toHitSacred, int toHitEnhancement, int toHitSize, int toHitUntyped, int toHitOther,
-                                  int dmgMorale, int dmgLuck,  int dmgSacred, int dmgEnhancement,
+                                  int toHitSacred, int toHitSize, int toHitUntyped, int toHitOther,
+                                  int dmgMorale, int dmgLuck,  int dmgSacred,
                                   int dmgUntyped, int dmgOther, int acArmor, int acNatural,
                                   int acNaturalEnhancement, int acSacred, int acShield, int acDeflection,
                                   int acUntyped, int acOther, int acDexMax, int acSize)
@@ -664,8 +652,7 @@ public class Build implements Serializable
                         //to-hit bonuses
                         eElement.getElementsByTagName("tohitmorale").item(0).setTextContent(Integer.toString(toHitMorale));
                         eElement.getElementsByTagName("tohitluck").item(0).setTextContent(Integer.toString(toHitLuck));
-                        eElement.getElementsByTagName("tohitsacred").item(0).setTextContent(Integer.toString(toHitSacred));
-                        eElement.getElementsByTagName("tohitenhancement").item(0).setTextContent(Integer.toString(toHitEnhancement));
+                        eElement.getElementsByTagName("tohitsacred").item(0).setTextContent(Integer.toString(toHitSacred));                    
                         eElement.getElementsByTagName("tohitsize").item(0).setTextContent(Integer.toString(toHitSize));
                         eElement.getElementsByTagName("tohituntyped").item(0).setTextContent(Integer.toString(toHitUntyped));
                         eElement.getElementsByTagName("tohitother").item(0).setTextContent(Integer.toString(toHitOther));
@@ -674,7 +661,6 @@ public class Build implements Serializable
                         eElement.getElementsByTagName("dmgmorale").item(0).setTextContent(Integer.toString(dmgMorale));
                         eElement.getElementsByTagName("dmgluck").item(0).setTextContent(Integer.toString(dmgLuck));
                         eElement.getElementsByTagName("dmgsacred").item(0).setTextContent(Integer.toString(dmgSacred));
-                        eElement.getElementsByTagName("dmgenhancement").item(0).setTextContent(Integer.toString(dmgEnhancement));
                         eElement.getElementsByTagName("dmguntyped").item(0).setTextContent(Integer.toString(dmgUntyped));
                         eElement.getElementsByTagName("dmgother").item(0).setTextContent(Integer.toString(dmgOther));
                         
@@ -710,8 +696,8 @@ public class Build implements Serializable
                                                  dexSize, dexAlchemical, dexInherent, dexOther, con,
                                                  conEnhancement, conMorale, conSize, conAlchemical,
                                                  conInherent, conOther, toHitMorale, toHitLuck,
-                                                 toHitSacred, toHitEnhancement, toHitSize, toHitUntyped, toHitOther,
-                                                 dmgMorale, dmgLuck,  dmgSacred, dmgEnhancement,
+                                                 toHitSacred, toHitSize, toHitUntyped, toHitOther,
+                                                 dmgMorale, dmgLuck,  dmgSacred,
                                                  dmgUntyped, dmgOther, acArmor, acNatural,
                                                  acNaturalEnhancement, acSacred, acShield, acDeflection,
                                                  acUntyped, acOther, acDexMax, acSize);

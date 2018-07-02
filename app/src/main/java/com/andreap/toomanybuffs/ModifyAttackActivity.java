@@ -36,6 +36,7 @@ public class ModifyAttackActivity extends AppCompatActivity
     static int modAttPos = -1;
     
     static String stName = new String("");
+    static String stWeaponEnhancement = new String("");
     static String stCritical = new String("");
     static String stBaseDiceDamage = new String("");
     static String stBonusDiceDamage = new String("");
@@ -69,6 +70,13 @@ public class ModifyAttackActivity extends AppCompatActivity
         baseDamageAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         baseDamageSpinner.setAdapter(baseDamageAdapter);
 
+        Spinner weaponEnhancementSpinner = (Spinner) findViewById(R.id.modifyattackWeaponEnhancementSpinner);       
+        ArrayAdapter<CharSequence> weaponEnhancementAdapter = ArrayAdapter.createFromResource
+        (this, R.array.weaponenhancement, android.R.layout.simple_spinner_item);
+        weaponEnhancementAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        weaponEnhancementSpinner.setAdapter(weaponEnhancementAdapter);
+        
+        
         Spinner criticalSpinner = (Spinner) findViewById(R.id.modifyattackCriticalSpinner);       
         ArrayAdapter<CharSequence> criticalAdapter = ArrayAdapter.createFromResource
         (this, R.array.critical, android.R.layout.simple_spinner_item);
@@ -133,6 +141,10 @@ public class ModifyAttackActivity extends AppCompatActivity
             int namePos = baseDamageAdapter.getPosition(stBaseDiceDamage);
             baseDamageSpinner.setSelection(namePos);
         }
+        if (stWeaponEnhancement != null) {
+            int namePos = weaponEnhancementAdapter.getPosition(stWeaponEnhancement);
+            weaponEnhancementSpinner.setSelection(namePos);
+        }
         if (stCritical != null) {
             int criticalPos = criticalAdapter.getPosition(stCritical);
             criticalSpinner.setSelection(criticalPos);
@@ -181,6 +193,7 @@ public class ModifyAttackActivity extends AppCompatActivity
         {
 
             Spinner baseDamageSpinner = (Spinner) findViewById(R.id.modifyattackBaseDamageSpinner);
+            Spinner weaponEnhancementSpinner = (Spinner) findViewById(R.id.modifyattackWeaponEnhancementSpinner);
             Spinner criticalSpinner = (Spinner) findViewById(R.id.modifyattackCriticalSpinner);                  
             Spinner bonusDiceDamageSpinner = (Spinner) findViewById(R.id.modifyattackBonusDiceSpinner);                   
             Spinner bonusDiceDamageSpinner2 = (Spinner) findViewById(R.id.modifyattackBonusDiceSpinner2);                  
@@ -193,6 +206,7 @@ public class ModifyAttackActivity extends AppCompatActivity
 
             String name = new String(attackView.getText().toString());
             String baseDamage = new String(String.valueOf(baseDamageSpinner.getSelectedItem()));
+            String weaponEnhancement = new String(String.valueOf(weaponEnhancementSpinner.getSelectedItem()));
             String critical = new String(String.valueOf(criticalSpinner.getSelectedItem()));
             String bonusDiceDamage = new String(String.valueOf(bonusDiceDamageSpinner.getSelectedItem()));
             String bonusDiceDamage2 = new String(String.valueOf(bonusDiceDamageSpinner2.getSelectedItem()));
@@ -205,7 +219,7 @@ public class ModifyAttackActivity extends AppCompatActivity
             int customAttackBonusInt = Integer.parseInt(customAttackBonus);
             int customDamageBonusInt = Integer.parseInt(customDamageBonus);
 
-            modifyAttack (this, name, modAttPos, baseDamage,
+            modifyAttack (this, name, modAttPos, baseDamage, weaponEnhancement,
                           critical, bonusDiceDamage,
                           bonusDiceDamage2, attackBasedOn,
                           damageBasedOn, iterativeAttacks,
@@ -282,7 +296,7 @@ public class ModifyAttackActivity extends AppCompatActivity
     }
 
     public void modifyAttack (Context ctx,
-                              String newName, int pos, String baseDamage,
+                              String newName, int pos, String baseDamage, String weaponEnhancement,
                               String critical, String bonusDiceDamage,
                               String bonusDiceDamage2, String attackBasedOn,
                               String damageBasedOn, String iterativeAttacks,
@@ -333,7 +347,7 @@ public class ModifyAttackActivity extends AppCompatActivity
                                         
                                         eAttack.getElementsByTagName("name").item(0).setTextContent(newName);
                                         eAttack.getElementsByTagName("basedicedamage").item(0).setTextContent(baseDamage);
-                                        
+                                        eAttack.getElementsByTagName("weaponenhancement").item(0).setTextContent(weaponEnhancement);
                                         eAttack.getElementsByTagName("critical").item(0).setTextContent(critical);
                                         eAttack.getElementsByTagName("bonusdicedamage").item(0).setTextContent(bonusDiceDamage);
                                         eAttack.getElementsByTagName("bonusdicedamage2").item(0).setTextContent(bonusDiceDamage2);
@@ -541,7 +555,7 @@ public class ModifyAttackActivity extends AppCompatActivity
                                         
                                         stName = eAttack.getElementsByTagName("name").item(0).getTextContent();
                                         stBaseDiceDamage = eAttack.getElementsByTagName("basedicedamage").item(0).getTextContent();
-                                            
+                                        stWeaponEnhancement = eAttack.getElementsByTagName("weaponenhancement").item(0).getTextContent();   
                                         stCritical = eAttack.getElementsByTagName("critical").item(0).getTextContent();
                                         stBonusDiceDamage = eAttack.getElementsByTagName("bonusdicedamage").item(0).getTextContent();
                                         stBonusDiceDamage2 = eAttack.getElementsByTagName("bonusdicedamage2").item(0).getTextContent();

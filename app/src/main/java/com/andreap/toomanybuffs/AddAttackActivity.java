@@ -50,6 +50,12 @@ public class AddAttackActivity extends AppCompatActivity
         baseDamageAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         baseDamageSpinner.setAdapter(baseDamageAdapter);
         
+        Spinner weaponEnhancementSpinner = (Spinner) findViewById(R.id.addattackWeaponEnhancementSpinner);       
+        ArrayAdapter<CharSequence> weaponEnhancementAdapter = ArrayAdapter.createFromResource
+        (this, R.array.weaponenhancement, android.R.layout.simple_spinner_item);
+        weaponEnhancementAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        weaponEnhancementSpinner.setAdapter(weaponEnhancementAdapter);
+        
         
         Spinner criticalSpinner = (Spinner) findViewById(R.id.addattackCriticalSpinner);       
         ArrayAdapter<CharSequence> criticalAdapter = ArrayAdapter.createFromResource
@@ -125,6 +131,7 @@ public class AddAttackActivity extends AppCompatActivity
         {
            
             Spinner baseDamageSpinner = (Spinner) findViewById(R.id.addattackBaseDamageSpinner);
+            Spinner weaponEnhancementSpinner = (Spinner) findViewById(R.id.addattackWeaponEnhancementSpinner);
             Spinner criticalSpinner = (Spinner) findViewById(R.id.addattackCriticalSpinner);                  
             Spinner bonusDiceDamageSpinner = (Spinner) findViewById(R.id.addattackBonusDiceSpinner);                   
             Spinner bonusDiceDamageSpinner2 = (Spinner) findViewById(R.id.addattackBonusDiceSpinner2);                  
@@ -139,6 +146,7 @@ public class AddAttackActivity extends AppCompatActivity
             name = name.trim();
             
             String baseDamage = new String(String.valueOf(baseDamageSpinner.getSelectedItem()));
+            String weaponEnhancement = new String(String.valueOf(baseDamageSpinner.getSelectedItem()));
             String critical = new String(String.valueOf(criticalSpinner.getSelectedItem()));
             String bonusDiceDamage = new String(String.valueOf(bonusDiceDamageSpinner.getSelectedItem()));
             String bonusDiceDamage2 = new String(String.valueOf(bonusDiceDamageSpinner2.getSelectedItem()));
@@ -152,7 +160,7 @@ public class AddAttackActivity extends AppCompatActivity
             int customDamageBonusInt = Integer.parseInt(customDamageBonus);
                    
             addNewAttack (this, staticAddAttackBuildName,
-                         name, baseDamage,
+                         name, baseDamage, weaponEnhancement,
                          critical, bonusDiceDamage,
                          bonusDiceDamage2, attackBasedOn,
                          damageBasedOn, iterativeAttacks,
@@ -193,7 +201,7 @@ public class AddAttackActivity extends AppCompatActivity
     }
     
     public void addNewAttack (Context ctx, String loadedBuildName, String name, String baseDamage,
-                              String critical, String bonusDiceDamage,
+                              String weaponEnhancement, String critical, String bonusDiceDamage,
                               String bonusDiceDamage2, String attackBasedOn,
                               String damageBasedOn, String iterativeAttacks,
                               String TWF, int customAttackBonusInt,
@@ -235,6 +243,8 @@ public class AddAttackActivity extends AppCompatActivity
                     attackName.appendChild(doc.createTextNode(name));
                     Element attackBaseDiceDamage = doc.createElement("basedicedamage");
                     attackBaseDiceDamage.appendChild(doc.createTextNode(baseDamage));
+                    Element attackWeaponEnhancement = doc.createElement("weaponenhancement");
+                    attackWeaponEnhancement.appendChild(doc.createTextNode(weaponEnhancement));
                     Element attackCritical = doc.createElement("critical");
                     attackCritical.appendChild(doc.createTextNode(critical));
                     Element attackBonusDiceDamage = doc.createElement("bonusdicedamage");
@@ -259,6 +269,7 @@ public class AddAttackActivity extends AppCompatActivity
 
                     newAttack.appendChild(attackName);
                     newAttack.appendChild(attackBaseDiceDamage);
+                    newAttack.appendChild(attackWeaponEnhancement);
                     newAttack.appendChild(attackCritical);
                     newAttack.appendChild(attackBonusDiceDamage);
                     newAttack.appendChild(attackBonusDiceDamage2);
@@ -314,6 +325,8 @@ public class AddAttackActivity extends AppCompatActivity
                                 attackName.appendChild(doc.createTextNode(name));
                                 Element attackBaseDiceDamage = doc.createElement("basedicedamage");
                                 attackBaseDiceDamage.appendChild(doc.createTextNode(baseDamage));
+                                Element attackWeaponEnhancement = doc.createElement("weaponenhancement");
+                                attackWeaponEnhancement.appendChild(doc.createTextNode(weaponEnhancement));
                                 Element attackCritical = doc.createElement("critical");
                                 attackCritical.appendChild(doc.createTextNode(critical));
                                 Element attackBonusDiceDamage = doc.createElement("bonusdicedamage");
@@ -336,6 +349,7 @@ public class AddAttackActivity extends AppCompatActivity
 
                                 newAttack.appendChild(attackName);
                                 newAttack.appendChild(attackBaseDiceDamage);
+                                newAttack.appendChild(attackWeaponEnhancement);
                                 newAttack.appendChild(attackCritical);
                                 newAttack.appendChild(attackBonusDiceDamage);
                                 newAttack.appendChild(attackBonusDiceDamage2);
@@ -382,6 +396,8 @@ public class AddAttackActivity extends AppCompatActivity
                         attackName.appendChild(doc.createTextNode(name));
                         Element attackBaseDiceDamage = doc.createElement("basedicedamage");
                         attackBaseDiceDamage.appendChild(doc.createTextNode(baseDamage));
+                        Element attackWeaponEnhancement = doc.createElement("weaponenhancement");
+                        attackWeaponEnhancement.appendChild(doc.createTextNode(weaponEnhancement));
                         Element attackCritical = doc.createElement("critical");
                         attackCritical.appendChild(doc.createTextNode(critical));
                         Element attackBonusDiceDamage = doc.createElement("bonusdicedamage");
@@ -406,6 +422,7 @@ public class AddAttackActivity extends AppCompatActivity
 
                         newAttack.appendChild(attackName);
                         newAttack.appendChild(attackBaseDiceDamage);
+                        newAttack.appendChild(attackWeaponEnhancement);
                         newAttack.appendChild(attackCritical);
                         newAttack.appendChild(attackBonusDiceDamage);
                         newAttack.appendChild(attackBonusDiceDamage2);
@@ -461,6 +478,8 @@ public class AddAttackActivity extends AppCompatActivity
                 attackName.appendChild(doc.createTextNode(name));
                 Element attackBaseDiceDamage = doc.createElement("basedicedamage");
                 attackBaseDiceDamage.appendChild(doc.createTextNode(baseDamage));
+                Element attackWeaponEnhancement = doc.createElement("weaponenhancement");
+                attackWeaponEnhancement.appendChild(doc.createTextNode(weaponEnhancement));
                 Element attackCritical = doc.createElement("critical");
                 attackCritical.appendChild(doc.createTextNode(critical));
                 Element attackBonusDiceDamage = doc.createElement("bonusdicedamage");
@@ -485,6 +504,7 @@ public class AddAttackActivity extends AppCompatActivity
                 
                 newAttack.appendChild(attackName);
                 newAttack.appendChild(attackBaseDiceDamage);
+                newAttack.appendChild(attackWeaponEnhancement);
                 newAttack.appendChild(attackCritical);
                 newAttack.appendChild(attackBonusDiceDamage);
                 newAttack.appendChild(attackBonusDiceDamage2);

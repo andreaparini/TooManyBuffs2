@@ -108,8 +108,8 @@ public class ChangeInfoActivity extends AppCompatActivity
              staticBuildChangeInfo.dexSize, staticBuildChangeInfo.dexAlchemical, staticBuildChangeInfo.dexInherent, staticBuildChangeInfo.dexOther, con,
              staticBuildChangeInfo.conEnhancement, staticBuildChangeInfo.conMorale, staticBuildChangeInfo.conSize, staticBuildChangeInfo.conAlchemical,
              staticBuildChangeInfo.conInherent, staticBuildChangeInfo.conOther, staticBuildChangeInfo.toHitMorale, staticBuildChangeInfo.toHitLuck,
-             staticBuildChangeInfo.toHitSacred, staticBuildChangeInfo.toHitEnhancement, staticBuildChangeInfo.toHitSize, staticBuildChangeInfo.toHitUntyped, staticBuildChangeInfo.toHitOther,
-             staticBuildChangeInfo.dmgMorale, staticBuildChangeInfo.dmgLuck, staticBuildChangeInfo. dmgSacred, staticBuildChangeInfo.dmgEnhancement,
+             staticBuildChangeInfo.toHitSacred, staticBuildChangeInfo.toHitSize, staticBuildChangeInfo.toHitUntyped, staticBuildChangeInfo.toHitOther,
+             staticBuildChangeInfo.dmgMorale, staticBuildChangeInfo.dmgLuck, staticBuildChangeInfo. dmgSacred,
              staticBuildChangeInfo.dmgUntyped, staticBuildChangeInfo.dmgOther, staticBuildChangeInfo.acArmor, staticBuildChangeInfo.acNatural,
              staticBuildChangeInfo.acNaturalEnhancement, staticBuildChangeInfo.acSacred, staticBuildChangeInfo.acShield, staticBuildChangeInfo.acDeflection,
              staticBuildChangeInfo.acUntyped, staticBuildChangeInfo.acOther, staticBuildChangeInfo.acDexMax, staticBuildChangeInfo.acSize);

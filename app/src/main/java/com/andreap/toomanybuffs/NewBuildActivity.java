@@ -221,8 +221,6 @@ public class NewBuildActivity extends AppCompatActivity
                 newToHitLuck.appendChild(doc.createTextNode("0"));
                 Element newToHitSacred = doc.createElement("tohitsacred");
                 newToHitSacred.appendChild(doc.createTextNode("0"));
-                Element newToHitEnhancement = doc.createElement("tohitenhancement");
-                newToHitEnhancement.appendChild(doc.createTextNode("0"));
                 Element newToHitSize = doc.createElement("tohitsize");
                 newToHitSize.appendChild(doc.createTextNode("0")); 
                 Element newToHitUntyped = doc.createElement("tohituntyped");
@@ -236,8 +234,6 @@ public class NewBuildActivity extends AppCompatActivity
                 newDmgLuck.appendChild(doc.createTextNode("0"));
                 Element newDmgSacred = doc.createElement("dmgsacred");
                 newDmgSacred.appendChild(doc.createTextNode("0"));
-                Element newDmgEnhancement = doc.createElement("dmgenhancement");
-                newDmgEnhancement.appendChild(doc.createTextNode("0"));
                 Element newDmgUntyped = doc.createElement("dmguntyped");
                 newDmgUntyped.appendChild(doc.createTextNode("0"));
                 Element newDmgOther = doc.createElement("dmgother");
@@ -298,16 +294,14 @@ public class NewBuildActivity extends AppCompatActivity
 
                 newBuild.appendChild(newToHitMorale);
                 newBuild.appendChild(newToHitLuck);
-                newBuild.appendChild(newToHitSacred);
-                newBuild.appendChild(newToHitEnhancement);
+                newBuild.appendChild(newToHitSacred);             
                 newBuild.appendChild(newToHitSize);
                 newBuild.appendChild(newToHitUntyped);
                 newBuild.appendChild(newToHitOther);
 
                 newBuild.appendChild(newDmgMorale);
                 newBuild.appendChild(newDmgLuck);
-                newBuild.appendChild(newDmgSacred);
-                newBuild.appendChild(newDmgEnhancement);
+                newBuild.appendChild(newDmgSacred);            
                 newBuild.appendChild(newDmgUntyped);
                 newBuild.appendChild(newDmgOther);
 
@@ -410,9 +404,7 @@ public class NewBuildActivity extends AppCompatActivity
                 Element newToHitLuck = doc.createElement("tohitluck");
                 newToHitLuck.appendChild(doc.createTextNode("0"));
                 Element newToHitSacred = doc.createElement("tohitsacred");
-                newToHitSacred.appendChild(doc.createTextNode("0"));
-                Element newToHitEnhancement = doc.createElement("tohitenhancement");
-                newToHitEnhancement.appendChild(doc.createTextNode("0"));
+                newToHitSacred.appendChild(doc.createTextNode("0"));            
                 Element newToHitSize = doc.createElement("tohitsize");
                 newToHitSize.appendChild(doc.createTextNode("0"));
                 Element newToHitUntyped = doc.createElement("tohituntyped");
@@ -426,8 +418,6 @@ public class NewBuildActivity extends AppCompatActivity
                 newDmgLuck.appendChild(doc.createTextNode("0"));
                 Element newDmgSacred = doc.createElement("dmgsacred");
                 newDmgSacred.appendChild(doc.createTextNode("0"));
-                Element newDmgEnhancement = doc.createElement("dmgenhancement");
-                newDmgEnhancement.appendChild(doc.createTextNode("0"));
                 Element newDmgUntyped = doc.createElement("dmguntyped");
                 newDmgUntyped.appendChild(doc.createTextNode("0"));
                 Element newDmgOther = doc.createElement("dmgother");
@@ -488,7 +478,6 @@ public class NewBuildActivity extends AppCompatActivity
                 newBuild.appendChild(newToHitMorale);
                 newBuild.appendChild(newToHitLuck);
                 newBuild.appendChild(newToHitSacred);
-                newBuild.appendChild(newToHitEnhancement);
                 newBuild.appendChild(newToHitSize);
                 newBuild.appendChild(newToHitUntyped);
                 newBuild.appendChild(newToHitOther);
@@ -496,7 +485,6 @@ public class NewBuildActivity extends AppCompatActivity
                 newBuild.appendChild(newDmgMorale);
                 newBuild.appendChild(newDmgLuck);
                 newBuild.appendChild(newDmgSacred);
-                newBuild.appendChild(newDmgEnhancement);
                 newBuild.appendChild(newDmgUntyped);
                 newBuild.appendChild(newDmgOther);
 

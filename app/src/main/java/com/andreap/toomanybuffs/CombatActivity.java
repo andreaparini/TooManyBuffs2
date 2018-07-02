@@ -269,6 +269,14 @@ public class CombatActivity extends AppCompatActivity
                 }
                 
                 
+                if((savedAttacks.get(j-1).weaponEnhancement)
+                    .equals("Masterwork"))
+                {
+                    numericToHit += 1;    
+                } else {
+                    numericToHit += Integer.valueOf(savedAttacks.get(j-1).weaponEnhancement);
+                }
+                
                 
                 
                 
@@ -532,6 +540,12 @@ public class CombatActivity extends AppCompatActivity
                         staticBuild.getConModifier();
                 } 
                 
+                if(!(savedAttacks.get(j-1).weaponEnhancement)
+                   .equals("Masterwork"))
+                {
+                    numericBonusDamage += Integer.valueOf(savedAttacks.get(j-1).weaponEnhancement);
+                }
+                
                 numericBonusDamage+= staticBuild.getTotalDmgBonus();
                 numericBonusDamage+= savedAttacks.get(j-1).customDamageBonus;
                 
@@ -634,6 +648,7 @@ public class CombatActivity extends AppCompatActivity
                                 {
                                     Element eAttack = (Element) nAttack;
                                     String name = eAttack.getElementsByTagName("name").item(0).getTextContent();
+                                    String weaponEnhancement = eAttack.getElementsByTagName("weaponenhancement").item(0).getTextContent();
                                     String attackBasedOn = eAttack.getElementsByTagName("attackbasedon").item(0).getTextContent();
                                     String damageBasedOn = eAttack.getElementsByTagName("damagebasedon").item(0).getTextContent();
                                     String critical = eAttack.getElementsByTagName("critical").item(0).getTextContent();
@@ -647,7 +662,7 @@ public class CombatActivity extends AppCompatActivity
                                     
                                     
                                     dbAttacks.add(new AttackInfo
-                                                 (name, baseDamage, bonusDiceDamage, 
+                                                 (name, baseDamage, weaponEnhancement, bonusDiceDamage, 
                                                   bonusDiceDamage2, attackBasedOn, damageBasedOn, 
                                                   iterativeAttacks, critical, 
                                                   TWF, customAttackBonus,

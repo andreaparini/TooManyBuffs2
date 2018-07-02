@@ -4,6 +4,7 @@ public class AttackInfo
 {
     public String name;                //ok
     public String baseDamage;
+    public String weaponEnhancement;
     public String bonusDiceDamage;
     public String bonusDiceDamage2;
     public String attackBasedOn;
@@ -25,7 +26,7 @@ public class AttackInfo
         this.nattacks = nattacks;
     }
     
-    AttackInfo(String name, String baseDamage,
+    AttackInfo(String name, String baseDamage, String weaponEnhancement,
                String bonusDiceDamage, String bonusDiceDamage2,
                String attackBasedOn, String damageBasedOn, 
                String iterativeAttacks, String critical, 
@@ -34,6 +35,7 @@ public class AttackInfo
     {
         this.name = name;
         this.baseDamage = baseDamage;
+        this.weaponEnhancement = weaponEnhancement;
         this.bonusDiceDamage = bonusDiceDamage;
         this.bonusDiceDamage2 = bonusDiceDamage2;
         this.attackBasedOn = attackBasedOn;

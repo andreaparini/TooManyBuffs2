@@ -281,16 +281,14 @@ public class CustomizationActivity extends AppCompatActivity
         Spinner conOther = (Spinner) findViewById(R.id.customConOther);         
 
         Spinner toHitMorale = (Spinner) findViewById(R.id.customToHitMorale);
-        Spinner toHitLuck = (Spinner) findViewById(R.id.customToHitLuck);
-        Spinner toHitEnhancement = (Spinner) findViewById(R.id.customToHitEnhancement);
+        Spinner toHitLuck = (Spinner) findViewById(R.id.customToHitLuck);      
         Spinner toHitSize = (Spinner) findViewById(R.id.customToHitSize);
         Spinner toHitSacred = (Spinner) findViewById(R.id.customToHitSacred);
         Spinner toHitUntyped = (Spinner) findViewById(R.id.customToHitUntyped);
         Spinner toHitOther = (Spinner) findViewById(R.id.customToHitOther);         
 
         Spinner dmgMorale = (Spinner) findViewById(R.id.customDmgMorale);
-        Spinner dmgLuck = (Spinner) findViewById(R.id.customDmgLuck);
-        Spinner dmgEnhancement = (Spinner) findViewById(R.id.customDmgEnhancement);
+        Spinner dmgLuck = (Spinner) findViewById(R.id.customDmgLuck);       
         Spinner dmgSacred = (Spinner) findViewById(R.id.customDmgSacred);
         Spinner dmgUntyped = (Spinner) findViewById(R.id.customDmgUntyped);
         Spinner dmgOther = (Spinner) findViewById(R.id.customDmgOther);         
@@ -338,7 +336,6 @@ public class CustomizationActivity extends AppCompatActivity
 
         toHitMorale.setAdapter(custom015Adapter);
         toHitLuck.setAdapter(custom015Adapter);
-        toHitEnhancement.setAdapter(custom015Adapter);
         toHitSize.setAdapter(custom015Adapter);
         toHitSacred.setAdapter(custom015Adapter);
         toHitUntyped.setAdapter(custom015Adapter);
@@ -346,7 +343,6 @@ public class CustomizationActivity extends AppCompatActivity
 
         dmgMorale.setAdapter(custom015Adapter);
         dmgLuck.setAdapter(custom015Adapter);
-        dmgEnhancement.setAdapter(custom015Adapter);
         dmgSacred.setAdapter(custom015Adapter);
         dmgUntyped.setAdapter(custom015Adapter);
         dmgOther.setAdapter(custom015Adapter); 
@@ -407,8 +403,8 @@ public class CustomizationActivity extends AppCompatActivity
                  staticBuild.dexSize, staticBuild.dexAlchemical, staticBuild.dexInherent, staticBuild.dexOther, staticBuild.con,
                  staticBuild.conEnhancement, staticBuild.conMorale, staticBuild.conSize, staticBuild.conAlchemical,
                  staticBuild.conInherent, staticBuild.conOther, staticBuild.toHitMorale, staticBuild.toHitLuck,
-                 staticBuild.toHitSacred, staticBuild.toHitEnhancement, staticBuild.toHitSize, staticBuild.toHitUntyped, staticBuild.toHitOther,
-                 staticBuild.dmgMorale, staticBuild.dmgLuck, staticBuild. dmgSacred, staticBuild.dmgEnhancement,
+                 staticBuild.toHitSacred, staticBuild.toHitSize, staticBuild.toHitUntyped, staticBuild.toHitOther,
+                 staticBuild.dmgMorale, staticBuild.dmgLuck, staticBuild. dmgSacred,
                  staticBuild.dmgUntyped, staticBuild.dmgOther, staticBuild.acArmor, staticBuild.acNatural,
                  staticBuild.acNaturalEnhancement, staticBuild.acSacred, staticBuild.acShield, staticBuild.acDeflection,
                  staticBuild.acUntyped, staticBuild.acOther, staticBuild.acDexMax, staticBuild.acSize);
@@ -511,8 +507,7 @@ public class CustomizationActivity extends AppCompatActivity
         //to hit
 
         Spinner toHitMorale = (Spinner) findViewById(R.id.customToHitMorale);
-        Spinner toHitLuck = (Spinner) findViewById(R.id.customToHitLuck);
-        Spinner toHitEnhancement = (Spinner) findViewById(R.id.customToHitEnhancement);
+        Spinner toHitLuck = (Spinner) findViewById(R.id.customToHitLuck);       
         Spinner toHitSize = (Spinner) findViewById(R.id.customToHitSize);
         Spinner toHitSacred = (Spinner) findViewById(R.id.customToHitSacred);
         Spinner toHitUntyped = (Spinner) findViewById(R.id.customToHitUntyped);
@@ -520,7 +515,6 @@ public class CustomizationActivity extends AppCompatActivity
 
         staticBuild.toHitMorale = Integer.parseInt(String.valueOf(toHitMorale.getSelectedItem()));
         staticBuild.toHitLuck = Integer.parseInt(String.valueOf(toHitLuck.getSelectedItem()));
-        staticBuild.toHitEnhancement = Integer.parseInt(String.valueOf(toHitEnhancement.getSelectedItem()));
         staticBuild.toHitSize = Integer.parseInt(String.valueOf(toHitSize.getSelectedItem()));
         staticBuild.toHitSacred = Integer.parseInt(String.valueOf(toHitSacred.getSelectedItem()));
         staticBuild.toHitUntyped = Integer.parseInt(String.valueOf(toHitUntyped.getSelectedItem()));
@@ -530,15 +524,13 @@ public class CustomizationActivity extends AppCompatActivity
         //damage
 
         Spinner dmgMorale = (Spinner) findViewById(R.id.customDmgMorale);
-        Spinner dmgLuck = (Spinner) findViewById(R.id.customDmgLuck);
-        Spinner dmgEnhancement = (Spinner) findViewById(R.id.customDmgEnhancement);
+        Spinner dmgLuck = (Spinner) findViewById(R.id.customDmgLuck);       
         Spinner dmgSacred = (Spinner) findViewById(R.id.customDmgSacred);
         Spinner dmgUntyped = (Spinner) findViewById(R.id.customDmgUntyped);
         Spinner dmgOther = (Spinner) findViewById(R.id.customDmgOther);         
 
         staticBuild.dmgMorale = Integer.parseInt(String.valueOf(dmgMorale.getSelectedItem()));
         staticBuild.dmgLuck = Integer.parseInt(String.valueOf(dmgLuck.getSelectedItem()));
-        staticBuild.dmgEnhancement = Integer.parseInt(String.valueOf(dmgEnhancement.getSelectedItem()));
         staticBuild.dmgSacred = Integer.parseInt(String.valueOf(dmgSacred.getSelectedItem()));
         staticBuild.dmgUntyped = Integer.parseInt(String.valueOf(dmgUntyped.getSelectedItem()));
         staticBuild.dmgOther = Integer.parseInt(String.valueOf(dmgOther.getSelectedItem()));
@@ -704,8 +696,7 @@ public class CustomizationActivity extends AppCompatActivity
         //to hit
         
         Spinner toHitMorale = (Spinner) findViewById(R.id.customToHitMorale);
-        Spinner toHitLuck = (Spinner) findViewById(R.id.customToHitLuck);
-        Spinner toHitEnhancement = (Spinner) findViewById(R.id.customToHitEnhancement);
+        Spinner toHitLuck = (Spinner) findViewById(R.id.customToHitLuck);       
         Spinner toHitSize = (Spinner) findViewById(R.id.customToHitSize);
         Spinner toHitSacred = (Spinner) findViewById(R.id.customToHitSacred);
         Spinner toHitUntyped = (Spinner) findViewById(R.id.customToHitUntyped);
@@ -713,7 +704,6 @@ public class CustomizationActivity extends AppCompatActivity
 
         toHitMorale.setAdapter(custom015Adapter);
         toHitLuck.setAdapter(custom015Adapter);
-        toHitEnhancement.setAdapter(custom015Adapter);
         toHitSacred.setAdapter(custom015Adapter);
         toHitUntyped.setAdapter(custom015Adapter);
         toHitOther.setAdapter(custom015Adapter); 
@@ -723,9 +713,7 @@ public class CustomizationActivity extends AppCompatActivity
         int toHitMoralePos = custom015Adapter.getPosition(Integer.toString(staticBuild.toHitMorale));
         toHitMorale.setSelection(toHitMoralePos);
         int toHitLuckPos = custom015Adapter.getPosition(Integer.toString(staticBuild.toHitLuck));
-        toHitLuck.setSelection(toHitLuckPos);      
-        int toHitEnhancementPos = custom015Adapter.getPosition(Integer.toString(staticBuild.toHitEnhancement));
-        toHitEnhancement.setSelection(toHitEnhancementPos);
+        toHitLuck.setSelection(toHitLuckPos);                     
         int toHitSizePos = custom015Adapter.getPosition(Integer.toString(staticBuild.toHitSize));
         toHitSize.setSelection(toHitSizePos);   
         int toHitSacredPos = custom015Adapter.getPosition(Integer.toString(staticBuild.toHitSacred));
@@ -740,15 +728,13 @@ public class CustomizationActivity extends AppCompatActivity
         //damage
         
         Spinner dmgMorale = (Spinner) findViewById(R.id.customDmgMorale);
-        Spinner dmgLuck = (Spinner) findViewById(R.id.customDmgLuck);
-        Spinner dmgEnhancement = (Spinner) findViewById(R.id.customDmgEnhancement);
+        Spinner dmgLuck = (Spinner) findViewById(R.id.customDmgLuck);     
         Spinner dmgSacred = (Spinner) findViewById(R.id.customDmgSacred);
         Spinner dmgUntyped = (Spinner) findViewById(R.id.customDmgUntyped);
         Spinner dmgOther = (Spinner) findViewById(R.id.customDmgOther);         
 
         dmgMorale.setAdapter(custom015Adapter);
-        dmgLuck.setAdapter(custom015Adapter);
-        dmgEnhancement.setAdapter(custom015Adapter);
+        dmgLuck.setAdapter(custom015Adapter);    
         dmgSacred.setAdapter(custom015Adapter);
         dmgUntyped.setAdapter(custom015Adapter);
         dmgOther.setAdapter(custom015Adapter); 
@@ -757,8 +743,6 @@ public class CustomizationActivity extends AppCompatActivity
         dmgMorale.setSelection(dmgMoralePos);
         int dmgLuckPos = custom015Adapter.getPosition(Integer.toString(staticBuild.dmgLuck));
         dmgLuck.setSelection(dmgLuckPos);
-        int dmgEnhancementPos = custom015Adapter.getPosition(Integer.toString(staticBuild.dmgEnhancement));
-        dmgEnhancement.setSelection(dmgEnhancementPos);
         int dmgSacredPos = custom015Adapter.getPosition(Integer.toString(staticBuild.dmgSacred));
         dmgSacred.setSelection(dmgSacredPos);
         int dmgUntypedPos = custom015Adapter.getPosition(Integer.toString(staticBuild.dmgUntyped));

@@ -74,6 +74,26 @@
                 <TextView
                     android:layout_width="175dp"
                     android:layout_height="wrap_content"
+                    android:text="Enhancement Bonus"
+                    android:textAppearance="?android:attr/textAppearanceMedium"                
+                    android:layout_marginLeft="10dp"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/modifyattackWeaponEnhancementSpinner"/>
+
+            </LinearLayout>
+            
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
                     android:text="Critical"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:layout_marginLeft="10dp"/>
