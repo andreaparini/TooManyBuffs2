@@ -629,27 +629,7 @@
 						android:id="@+id/customToHitLuck"
 						android:gravity="center"/>
 
-				</LinearLayout>
-
-				<LinearLayout
-					android:orientation="horizontal"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_marginTop="8dp">
-
-					<TextView
-						android:layout_width="200dp"
-						android:layout_height="wrap_content"
-						android:text="Enhancement bonus"
-						android:textAppearance="?android:attr/textAppearanceMedium"/>
-
-					<Spinner
-						android:layout_width="match_parent"
-						android:layout_height="match_parent"
-						android:id="@+id/customToHitEnhancement"
-						android:gravity="center"/>
-
-				</LinearLayout>
+				</LinearLayout>			
                 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -800,26 +780,6 @@
 						android:layout_width="match_parent"
 						android:layout_height="match_parent"
 						android:id="@+id/customDmgLuck"
-						android:gravity="center"/>
-
-				</LinearLayout>
-
-				<LinearLayout
-					android:orientation="horizontal"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_marginTop="8dp">
-
-					<TextView
-						android:layout_width="200dp"
-						android:layout_height="wrap_content"
-						android:text="Enhancement bonus"
-						android:textAppearance="?android:attr/textAppearanceMedium"/>
-
-					<Spinner
-						android:layout_width="match_parent"
-						android:layout_height="match_parent"
-						android:id="@+id/customDmgEnhancement"
 						android:gravity="center"/>
 
 				</LinearLayout>
