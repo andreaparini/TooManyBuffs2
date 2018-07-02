@@ -1,6 +1,0 @@
-/** Automatically generated file. DO NOT MODIFY */
-package com.andreap.toomanybuffs;
-
-public final class BuildConfig {
-    public final static boolean DEBUG = true;
-}
